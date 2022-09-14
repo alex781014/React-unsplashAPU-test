@@ -13,7 +13,13 @@ class SearchBar extends React.Component{
             <form onSubmit={this.onFormSubmit} className="ui form">
               <div className="field">
                 <label>Image Search</label>
-                <input type="text" value={this.state.term} onChange={e=>this.setState({term:e.target.value})} />
+                <input
+                  type="text"
+                  placeholder="請輸入想搜尋的圖片名稱"
+                  value={this.state.term}
+                  onChange={(e) => this.setState({ term: e.target.value })}
+                  onClick={(e)=>this.setState({term:''})}
+                />
               </div>
             </form>
           </div>
